@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--
 
-JavaScript Snake
-By Patrick Gillespie
-http://patorjk.com/games/snake
-
-Source code is available here: https://github.com/patorjk/JavaScript-Snake
-
--->
     <meta charset="utf-8">
     <title>JavaScript Snake</title>
     <link rel=stylesheet id="style" type="text/css" href="./css/main-snake.css" />
@@ -69,17 +61,7 @@ function getTheme () {
     }, 10);
 }
 
-if (navigator.onLine && window.location.hostname === 'patorjk.com') {
-    const _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-3312460-1']);
-    _gaq.push(['_trackPageview']);
 
-    (function() {
-      const ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      const s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-}
 </script>
 </head>
 <body>
@@ -97,26 +79,18 @@ if (navigator.onLine && window.location.hostname === 'patorjk.com') {
         </select>
       </div>
       <div style="display:inline-block;margin-right:10px;">
-        <span>Mode:</span>
+        <span>רמות משחק:</span>
         <select id="selectMode">
-            <option value="100">Easy</option>
-            <option value="75" selected>Medium</option>
-            <option value="50">Hard</option>
-            <option value="25">Impossible</option>
-            <option value="110">Rush</option>
+            <option value="100">קל</option>
+            <option value="75" selected>בינוני</option>
+            <option value="50">קשה</option>
+           
         </select>
       </div>
-      <button onclick="go_full_screen()">Full Screen</button><br />
+      <button onclick="go_full_screen()">למסך מלא</button><br />
     </div>
 
-    <!--
-      <h2>Select which mode you would like to play in.</h2>
-      <button id="Easy">Easy</button><br />
-      <button id="Medium">Medium</button><br />
-      <button id="Difficult">Difficult</button>
 
-<button id="high-score">Get your current high score for this game.</button>
--->
     <div id="mode-wrapper" style="display: inline; width: auto;">
     </div>
 
