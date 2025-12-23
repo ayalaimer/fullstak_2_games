@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch The Ball Game</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/ball.css">
+</head>
+<body>
+    <!-- Action buttons: navigation and game control -->
+    <div class="actions">
+        <button id="home-button">Back to Home</button>
+        <button id="again-button">Play Again</button>
+        <button id="pause-button">Pause</button>
+    </div>
+
+    <h1>Catch The Ball!</h1>
+    <p>Score: <span id="score">0</span></p>
+    <p>Time Left: <span id="time">30</span> Seconds</p>
+
+    <!-- Game area: contains the clickable ball -->
+    <div id="game-area">
+        <div id="ball"></div>
+    </div>
+
+    <script src="../js/ball.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.form-container {
+    background: var(--panel);
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    border: 1px solid var(--border);
+}
+
+.form-container.hidden { display: none; }
+.form-container h2 { margin-bottom: 12px; }
+.form-container input { margin: 8px 0; }
+
+.toggle-link {
+    color: var(--accent);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#home-page { text-align: center; padding: 12px; }
+#home-page.hidden { display: none; }

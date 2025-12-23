@@ -1,0 +1,54 @@
+h1 {
+    margin-bottom: 8px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.score-info {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.score-info p {
+    margin: 0;
+}
+
+#game-area {
+    width: 500px;
+    max-width: 100%;
+    height: 400px;
+    margin: 8px auto;
+    background: var(--panel-2);
+    border: 2px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+#player {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-2);
+    position: absolute;
+    bottom: 10px;
+    left: 230px;
+}
+
+.block {
+    width: 40px;
+    height: 40px;
+    background: var(--accent);
+    position: absolute;
+    top: 0;
+}

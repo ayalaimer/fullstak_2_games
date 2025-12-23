@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - Home Page</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+    <!-- Sidebar menu: navigation links for login/logout -->
+    <div class="sidebar" id="sidebar">
+        <a href="login.html" id="login-link">Login</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+
+    <!-- Hamburger button -->
+    <div class="hamburger" onclick="toggleSidebar()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <div class="header">🎮 Let’s Start Playing 🎮</div>
+
+    <!-- Game selection: tiles for different games -->
+    <div class="container">
+        <div class="game-tile" onclick="openGame('dodge.html')">
+            <div class="game-title">Dodge the Blocks</div>
+        </div>
+
+        <div class="game-tile" onclick="openGame('ball.html')">
+            <div class="game-title">Catch the Ball</div>
+        </div>
+
+        <div class="game-tile">
+            <div class="coming-soon">Game in Development</div>
+        </div>
+
+        <div class="game-tile">
+            <div class="coming-soon">Game in Development</div>
+        </div>
+    </div>
+
+    <!-- Leaderboard: displays top players with their high scores -->
+    <section class="user-dashboard">
+        <h2>🏆 Players Table</h2>
+        <table class="score-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Game 1 High Score</th>
+                    <th>Game 2 High Score</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-body"></tbody>
+        </table>
+    </section>
+
+    <script src="../js/home.js"></script>
+</body>
+</html>

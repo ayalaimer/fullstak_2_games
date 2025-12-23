@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodge the Blocks</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/dodge.css">
+</head>
+<body>
+
+<h1>Dodge the Blocks</h1>
+
+<!-- Game controls: difficulty selection, start, pause, and home buttons -->
+<div class="controls">
+    <label>Difficulty:</label>
+    <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+    <button id="start-btn">Start</button>
+    <button id="pause-button" onclick="togglePause()">Pause</button>
+    <button id="home-button" onclick="goHome()">Back to Home</button>
+</div>
+
+<!-- Score information: displayed in a horizontal row -->
+<div class="score-info">
+    <p>Score: <span id="score">0</span></p>
+    <p>Time: <span id="time">30</span> Seconds</p>
+    <p>High Score: <span id="high-score">0</span></p>
+</div>
+
+<!-- Game area: contains player and falling blocks -->
+<div id="game-area">
+    <div id="player"></div>
+</div>
+
+<script src="../js/dodge.js"></script>
+</body>
+</html>
