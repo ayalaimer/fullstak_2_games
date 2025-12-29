@@ -4,7 +4,10 @@
  */
 
 // Load leaderboard when page loads
-document.addEventListener("DOMContentLoaded", loadLeaderboard);
+document.addEventListener("DOMContentLoaded", () => {
+    loadLeaderboard();
+    displayUserName();
+});
 
 /**
  * Navigates to the specified game page.
@@ -57,4 +60,15 @@ function loadLeaderboard() {
         .join("");
 
     tbody.innerHTML = rows;
+}
+
+/**
+ * Displays the current user's name in the header.
+ */
+function displayUserName() {
+    const currentUser = JSON.parse(localStorage.getItem("current user"));
+    const header = document.getElementById("header");
+    if (currentUser && currentUser.name) {
+        header.textContent = `🎮 Let's Start Playing, ${currentUser.name}! 🎮`;
+    }
 }
