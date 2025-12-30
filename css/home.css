@@ -45,11 +45,6 @@ body {
     color: #111827;
 }
 
-.coming-soon {
-    color: var(--muted);
-    font-weight: 700;
-}
-
 .sidebar {
     position: fixed;
     left: -240px;
