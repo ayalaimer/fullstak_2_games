@@ -56,9 +56,10 @@ document.getElementById('login').addEventListener('submit', (e) => {
         localStorage.setItem('current user', JSON.stringify(users[userIndex]));
         window.location.href = 'home.html';
 
-        document.getElementById('login-form').classList.add('hidden');
-        document.getElementById('home-page').classList.remove('hidden');
-        displayHighScores(users[userIndex].highScores);
+        //document.getElementById('login-form').classList.add('hidden');
+        //document.getElementById('home-page').classList.remove('hidden');
+        //displayHighScores(users[userIndex].highScores);
+        
         failedAttempts[email] = null;
     } else {
         alert('אימייל או סיסמה שגויים');
@@ -114,10 +115,8 @@ function handleFailedAttempt(email) {
 }
 
 /**
- * Adds a high score to the user's score history (keeps last 10 scores).
- * @param {string} email - The user's email address.
- * @param {number} score - The score to add.
- */
+ * Adds a high score to the user's score history (keeps last 10 scores)
+ 
 function addHighScore(email, score) {
     const user = users.find(user => user.email === email);
     if (user) {
@@ -128,11 +127,10 @@ function addHighScore(email, score) {
         localStorage.setItem('users', JSON.stringify(users));
     }
 }
+*/
 
 /**
  * Displays user's high scores in the UI.
- * @param {Array<number>} highScores - Array of high score values.
- */
 function displayHighScores(highScores) {
     const scoresContainer = document.getElementById('high-scores');
     scoresContainer.innerHTML = '';
@@ -142,6 +140,7 @@ function displayHighScores(highScores) {
         scoresContainer.appendChild(scoreElement);
     });
 }
+*/
 
 /**
  * Sets a cookie with specified name, value, and expiration time.

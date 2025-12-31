@@ -47,7 +47,10 @@ function loadLeaderboard() {
             const score1 = Number.isFinite(u.HighScoreBall) ? u.HighScoreBall : 0;
             const score2 = Number.isFinite(u.HighScoreDodge) ? u.HighScoreDodge : 0;
             const best = Math.max(score1, score2);
-            return { name: u.name || "—", score1, score2, best };
+            const lastLogin = Array.isArray(u.timestamps) && u.timestamps.length > 0
+                ? new Date(u.timestamps[u.timestamps.length - 1]).toLocaleString()
+                : "—";
+            return { name: u.name || "—", score1, score2, best, lastLogin };
         })
         .sort((a, b) => b.best - a.best)
         .map(u => `
@@ -55,6 +58,7 @@ function loadLeaderboard() {
                 <td>${u.name}</td>
                 <td>${u.score1}</td>
                 <td>${u.score2}</td>
+                <td>${u.lastLogin}</td>
             </tr>
         `)
         .join("");
